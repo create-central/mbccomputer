@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>report01</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .fixed{
+
+            position: fixed;
+
+            width: 720px;
+            height: 128px;
+
+            margin: 0 auto;
+
+            top : 0px;
+            left: 0px;
+            right: 0px;
+
+            text-align: center;
+
+            font-size: 38px;
+
+        }
+
+        .wrapper1{
+            width: 720px;
+            height: 2560px;
+
+            margin: 0 auto;
+            
+        }
+
+        .img0{
+            
+
+            display: block;
+            margin: 0 auto;
+
+        }
+
+        .pics{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center; 
+            gap: 10px;
+        }
+
+        .img1,.img2,.img3,.img4{
+            
+
+            width: 100%;
+            
+
+        }
+
+        .wrapper2{
+            
+            width:500px;
+
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        input{
+            display: none;
+        }
+
+        input[id="im1"]:checked~.big{left: -0px; }
+        input[id="im2"]:checked~.big{left: -500px; }
+        input[id="im3"]:checked~.big{left: -1000px; }
+        input[id="im4"]:checked~.big{left: -1500px; }
+
+        .big{
+            width: 2000px;
+            height: 333px;
+            position: relative;
+            left:0px;
+            transition-duration: 0.5s;
+        }
+
+        .big > img{
+            width: 500px;
+            height: 333px;
+            display: block;
+            float: left;
+        }
+
+        .btns{
+
+            width: 200px;
+
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            align-items: center; 
+            gap: 10px;
+
+            
+
+        }
+
+        
+        form > textarea{
+            width: 320px;
+            height: 180px;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    <h1>report01</h1>
+    
+    <div class="fixed">
+
+        <a href="">콘텐츠</a>
+        <a href="#section0">0</a>
+        <a href="#section1">1</a>
+        <a href="#section2">2</a>
+        <a href="#section3">3</a>
+        <a href="#section4">4</a>
+
+    </div>
+
+
+
+    <div class="wrapper1">
+
+        <h1 id="section0">0 노트북</h1>
+
+        <img class="img0" src="./pic_file/a9dd8_pic.jpg" alt="" >
+
+        <br>
+
+
+
+        <h1 id="section1">1 사전적 의미</h1>
+
+        <p>일상적으로 휴대하여 사용하기 편하도록 공책 크기로 만든 경량 컴퓨터</p>
+        
+        <br>
+
+
+
+        <h1 id="section2">2 제조사</h1>
+
+        <div class="pics">
+            
+            <a href="https://www.samsung.com/sec/galaxybook/all-galaxybook/">
+            <img class="img1" src="./pic_file/148308_pic.jpg" alt="" >
+            </a>
+
+            <a href="https://www.lge.co.kr/category/notebook?subCateId=CT50000050">
+            <img class="img2" src="./pic_file/203519_pic.jpg" alt="" >
+            </a>
+
+            <a href="https://www.apple.com/kr/mac/?afid=p240%7Cgo~cmp-23623001912~adg-199052299412~ad-799193338256_kwd-3938425351~dev-c~ext-~prd-~mca-~nt-search&cid=wwa-kr-kwgo-mac-core-macbook-macfamily_hero_avail_031126-2026-Mac-Core-Exact-g-MacBook-Exact-%EB%A7%A5%EB%B6%81">
+            <img class="img3" src="./pic_file/b8ea3_pic.jpg" alt="" >
+            </a>
+
+            <img class="img4" src="./pic_file/etc_pic.jpg" alt="" >
+
+        </div>
+
+        <br>
+
+        <p>그림을 클릭하면 제조사 홈페이지로 이동합니다.(ETC는 제외)</p>
+
+        <br>
+
+
+
+        <h1 id="section3">3 여기에서 구입하기</h1>
+
+        <div class="wrapper2">
+            <input type="radio" id="im1" name="im">
+            <input type="radio" id="im2" name="im">
+            <input type="radio" id="im3" name="im">
+            <input type="radio" id="im4" name="im">
+
+            <div class="big">
+                <img src="./pic_file/20260127_01160115000003_M00.jpg" alt="">
+                <img src="./pic_file/20260127_01160115000003_M01.jpg" alt="">
+                <img src="./pic_file/79b29d16536b3161acaebe396bd2c53c.jpg" alt="">
+                <img src="./pic_file/etc-500x333.jpg" alt="">
+            </div>
+
+            <div class="btns">
+                <label for="im1">삼성 갤럭시 북 (137만원 부터)</label>
+                <label for="im2">엘지 그램 (86만원 부터)</label>
+                <label for="im3">애플 맥북 (99만원 부터)</label>
+                <label for="im4">기타 브랜드 (49만원 부터)</label>
+            </div>
+        </div>
+
+        <br>
+
+        <p>브랜드 이름을 클릭하면 됩니다.</p>
+
+        <br>
+
+        <h1 id="section4">4 문의하기</h1>
+
+        <form>
+            <textarea >
+이    름 :
+번    호 :
+
+문의사항 :
+            </textarea>
+            <br>
+            <button>보내기</button>
+            
+        </form>
+
+    </div>
+
+    
+    
+
+
+    
+</body>
+</html>
