@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>report02</title>
+    <style>
+    
+    p{
+        font-size: 2rem;
+    }
+
+    img{
+        width:  369px;
+        display: inline-block;
+        border: 1px solid black;
+
+    }
+
+    div{
+        display: inline-block;
+        border: 1px solid black;
+        padding-left: 14px;
+
+        font-size: 2rem;
+    }
+
+    div > span:nth-of-type(1){
+        color: red
+    }
+
+    div > span:nth-of-type(2){
+        color: blue
+    }
+    
+        
+    </style>
+
+</head>
+<body>
+    <h1>report02</h1>
+
+    <p>2026년 4월</p>
+
+    <img src="./pic_file/l1600_pic.jpg" alt="">
+
+    <br>
+
+    <div>
+
+        <!--
+        4월은 수요일 부터 시작 그 이전칸은 빈칸 처리
+         -->
+        
+        <span>일</span> 월 화 수 목 금 <span>토</span>
+        <br>
+        __&nbsp;&nbsp;__&nbsp;&nbsp;__&nbsp;
+
+    <script>
+
+        /*
+        4월은 일수가 30일이라서 for문을 1 부터 30 일까지 처리
+        */
+        
+        for(let i = 1;i <= 30;i++){
+            
+            /*
+            한자리 일수는 앞에 0붙여서 처리
+            */           
+
+            if (i<10){
+                document.write(`0`)
+            }
+            
+            document.write(`${i}&nbsp&nbsp;`)
+
+            /*
+            토요일 마다 줄 바꿈
+            */
+
+            if ((i + 3) % 7 == 0 ){
+                document.write(`<br>`)
+            }
+
+            
+        }
+
+    </script>
+
+</div>
+
+</body>
+</html>
